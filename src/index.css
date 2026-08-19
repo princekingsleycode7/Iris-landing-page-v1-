@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #FBFBFA;
+    --surface: #FFFFFF;
+    --text-primary: #18181B;
+    --text-secondary: #71717A;
+    --border-whisper: #EAEAEA;
+  }
+
+  body {
+    font-family: 'Geist', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #18181B;
+    background-color: #FBFBFA;
+    letter-spacing: -0.015em;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.03em;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  .font-serif, .font-editorial {
+    font-family: 'Newsreader', 'Times New Roman', Georgia, serif;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Taste Skill: Whisper elevation and double-bezel architecture */
+.whisper-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.04);
+}
+
+.whisper-card-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whisper-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.06);
+}
+
+/* Subtle Fixed Micro-Grain Texture (Pointer Events None, Zero CPU Cost) */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 99;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Tactile button push feedback */
+button:active, a:active {
+  transform: scale(0.985);
+}
+
+
